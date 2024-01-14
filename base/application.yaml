@@ -8,6 +8,9 @@ spec:
     repoURL: https://github.com/x86-unix/argocd.git
     targetRevision: master
     path: ./overlays/dev
+  syncPolicy:
+    #自動Syncにする場合
+    automated: {}
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
