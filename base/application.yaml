@@ -1,13 +1,13 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: ArgoCD
+  name: argocd
 spec:
-  project: ArgoCD-PJ
+  project: default
   source:
-    repoURL: https://github.com/x86-unix/k8s-helm-chart-test.git
-    targetRevision: main
-    path: .
+    repoURL: https://github.com/x86-unix/argocd.git
+    targetRevision: master
+    path: ./overlays/dev
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
